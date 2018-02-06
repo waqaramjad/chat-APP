@@ -16,17 +16,17 @@ class ChatBox extends Component {
         })
     }
     sendMessage(){
-        console.log(this.state.textAreaVal);
+        // console.log(this.state.textAreaVal);
         let messageData = {
             senderID : this.props.currentUser,
             receiverID: this.props.recipientID,
             message: this.state.textAreaVal
         }
-        console.log(messageData,'messageDatamessageData');
+        // console.log(messageData,'messageDatamessageData');
         this.props.sendMessage(messageData);
     }
     render() {
-        console.log(this.props.messages, 'aaaaaaaaaa')
+        // console.log(this.props.messages, 'aaaaaaaaaa')
         return (
             <div>
                 <textarea value={this.state.textAreaVal} onChange={this._textAreaHandler.bind(this)}></textarea>

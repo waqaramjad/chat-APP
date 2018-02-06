@@ -5,7 +5,7 @@ import {changeUserName} from '../store/action/action';
 class Home extends Component {
 
     _changeData(){
-        console.log('event called');
+        // console.log('event called');
         this.props.changeUserName();
     }
 

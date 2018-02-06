@@ -33,11 +33,11 @@ class Signup extends Component {
             password: ''
         })
         this.props.signupwithEmailPassword(user);
-        console.log(this.props)
+        // console.log(this.props)
     }
     _onChangeEmail(event){
-        // console.log(event.target.value)
-        console.log(this.state , 'odifjoig')
+        // // console.log(event.target.value)
+        // console.log(this.state , 'odifjoig')
 
         this.setState({
             email:event.target.value
@@ -49,7 +49,7 @@ class Signup extends Component {
         })
     }
     _onChangePassword(event){
-        console.log(event.target.value , 'iufhgud')
+        // console.log(event.target.value , 'iufhgud')
         
         this.setState({
             password:event.target.value

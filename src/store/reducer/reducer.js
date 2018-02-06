@@ -5,7 +5,8 @@ const INITIAL_STATE = {
     currentUser:'',
     users: [],
     messages: {},
-    recipientID: ''
+    recipientID: '',
+    saveChats : []
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -30,12 +31,17 @@ export default (state = INITIAL_STATE, action) => {
                 ...state,
                 recipientID: action.payload
             })
-        case ActionTypes.MESSAGES:
-            return ({
-                ...state,
-                messages: action.payload
-            })
-        default:
+            case ActionTypes.MESSAGES:
+                return ({
+                    ...state,
+                    messages: action.payload
+                })
+            case ActionTypes.SAVECHATS:
+                return ({
+                    ...state,
+                    saveChats: action.payload
+                })
+            default:
             return state;
     }
 

@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import {changeRecipientUID} from '../store/action/action'
 import { connect } from 'react-redux';
 import ChatBox from './chatbox';
+import RenderChat from './renderChat'
 
 class Chat extends Component {
     setRecipient(recUid){
-        console.log('recipient',recUid);
+        // console.log('recipient',recUid);
         this.props.changeRecUID(recUid);
     }
     render(){
-        console.log(this.props.currentUser,'////////////////');
-        console.log(this.props.allUsers, '******************');
-        console.log(this.props.allMessages, 'aaaaaaaaaa');
+        // console.log(this.props.currentUser,'////////////////');
+        // console.log(this.props.allUsers, '******************');
+        // console.log(this.props.allMessages, 'aaaaaaaaaa');
         return(
             <div>
                 <h1>Hello Chat</h1>
@@ -27,6 +28,7 @@ class Chat extends Component {
                 } */}
 
 <ChatBox />
+<RenderChat/>
               
             </div>
         )
